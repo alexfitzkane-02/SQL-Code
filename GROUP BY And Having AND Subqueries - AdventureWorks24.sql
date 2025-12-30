@@ -32,14 +32,12 @@ HAVING SUM(SOD.OrderQty) > 5
 
 --Find the best-selling product (by total quantity sold).
 SELECT TOP 1 * FROM (
-SELECT C.CustomerID
-,C.FirstName
-,C.LastName
+SELECT P.ProductID
+,P.Name AS [ProductName]
 ,SUM(SOD.OrderQty) AS [OrerQty]
-FROM SalesLT.SalesOrderHeader AS SOH
-INNER JOIN SalesLT.Customer AS C ON C.CustomerID = SOH.CustomerID
-INNER JOIN SalesLT.SalesOrderDetail AS SOD ON SOD.SalesOrderID = SOH.SalesOrderID
-GROUP BY C.CustomerID, C.FirstName, C.LastName
+FROM SalesLT.SalesOrderDetail AS SOD
+INNER JOIN SalesLT.Product AS P ON P.ProductID = SOD.ProductID
+GROUP BY P.ProductID, P.[Name]
 ) AS A
 ORDER BY A.OrerQty DESC
 
