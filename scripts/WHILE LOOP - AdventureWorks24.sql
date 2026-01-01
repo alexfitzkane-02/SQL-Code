@@ -5,8 +5,8 @@
 Task
 
 Write a SQL script that:
-1. Targets all products in the “Road Frames” product category.
-2. Increases each product’s ListPrice by 1% per iteration.
+1. Targets all products in the â€œRoad Framesâ€ product category.
+2. Increases each productâ€™s ListPrice by 1% per iteration.
 3. Repeats the increase until the average ListPrice of Road Frames increases by 20% compared to its original average.
 4. Tracks: Number of iterations performed ,Final average price, Stops automatically once the condition is met.
 
