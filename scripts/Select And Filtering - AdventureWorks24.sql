@@ -19,7 +19,7 @@ SELECT TOP 10 CustomerID
 FROM SalesLT.Customer
 WHERE CompanyName IS NOT NULL
 
---Find all products whose name starts with ìRoadî.
+--Find all products whose name starts with ‚ÄúRoad‚Äù.
 
 SELECT TOP 10 ProductID
 ,[Name] AS [Name]
